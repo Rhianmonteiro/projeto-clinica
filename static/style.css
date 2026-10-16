@@ -1,0 +1,249 @@
+/* CSS simples da Clínica Vida */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #222;
+    background: white;
+}
+
+nav {
+    padding: 15px;
+    border-bottom: 1px solid #ccc;
+}
+
+.nav-brand {
+    color: #222;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav ul {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav li a,
+.quick-links a,
+.stat-link,
+.back-link {
+    color: #222;
+}
+
+nav li a:hover {
+    text-decoration: underline;
+}
+
+.menu-toggle {
+    display: none;
+}
+
+.page-content {
+    max-width: 1100px;
+    margin: 20px auto;
+    padding: 0 15px;
+}
+
+.page-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+h1, h2 {
+    color: #222;
+}
+
+.panel, .stat-card, .login-card {
+    background: white;
+    border: 1px solid #ccc;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea,
+td input {
+    width: 100%;
+    padding: 7px;
+    border: 1px solid #aaa;
+    font: inherit;
+}
+
+.full-span, .form-actions {
+    grid-column: 1 / -1;
+}
+
+button, .button-secondary, .btn-edit, .btn-danger {
+    display: inline-block;
+    padding: 7px 10px;
+    border: 1px solid #888;
+    background: #eee;
+    color: #222;
+    font: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-small {
+    padding: 5px 7px;
+    font-size: 12px;
+}
+
+.table-wrap {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    min-width: 600px;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+th {
+    background: #f2f2f2;
+}
+
+.inline-form {
+    display: inline;
+}
+
+.actions-cell {
+    white-space: nowrap;
+}
+
+.empty, .muted {
+    color: #666;
+}
+
+.alert {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    background: white;
+}
+
+.alert.sucesso {
+    color: #176b35;
+}
+
+.alert.erro {
+    color: #a21d1d;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+}
+
+.stat-card {
+    display: block;
+    color: #222;
+    text-decoration: none;
+}
+
+.stat-card strong {
+    display: block;
+    margin: 8px 0;
+    font-size: 24px;
+}
+
+.stat-icon, .brand-mark {
+    font-weight: bold;
+}
+
+.quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.login-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    background: white;
+}
+
+.login-card {
+    width: 100%;
+    max-width: 400px;
+}
+
+.login-card h1, .login-card p {
+    text-align: center;
+}
+
+.login-card .form-group {
+    margin-bottom: 12px;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.login-card small {
+    display: block;
+    margin-top: 12px;
+}
+
+@media (max-width: 700px) {
+    nav ul {
+        display: flex;
+        margin-top: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .full-span, .form-actions {
+        grid-column: auto;
+    }
+}
+
+@media (max-width: 450px) {
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
